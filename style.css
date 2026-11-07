@@ -1,10 +1,12 @@
 
+
 @import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Poppins:wght@300;400;500;600&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Parisienne', cursive;
 }
 
 body {
@@ -96,12 +98,20 @@ button:hover {
         transform: translateY(0);
     }
 }
-.decoracion.pastel {
-    font-size: 180px !important;
-    line-height: 1.5;
-    display: block;
-    margin-bottom: 25px;
+.decoracion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 30px;
 }
+
+.pastel {
+    font-size: 110px;
+    display: inline-block;
+    transform: scale(1.5);
+}
+
 
 
 @keyframes flotar {
@@ -110,9 +120,14 @@ button:hover {
     }
 
     50% {
-        transform: translateY(-12px);
+        transform: translateY(-10px);
     }
 }
+.pp{
+    font-size: 20px;
+    font-family: 'Parisienne', cursive;
+}
+
 
 .confeti {
     position: fixed;
