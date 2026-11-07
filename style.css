@@ -1,0 +1,130 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fff0f5, #ffe1eb, #fff4df);
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 650px;
+}
+
+.tarjeta {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 55px 30px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.92);
+    border: 2px solid #e9c77d;
+    box-shadow: 0 15px 40px rgba(190, 120, 140, 0.18);
+}
+
+.decoracion {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-family: 'Parisienne', cursive;
+    font-size: clamp(38px, 8vw, 55px);
+    color: #c77d91;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #806773;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+button {
+    padding: 14px 28px;
+    border: 1px solid #d9b46b;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #e9c77d, #f5dca5);
+    color: #75552b;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 18px rgba(190, 150, 80, 0.25);
+}
+
+#sorpresa {
+    margin-top: 30px;
+    animation: aparecer 1s ease;
+}
+
+#sorpresa h2 {
+    font-family: 'Parisienne', cursive;
+    font-size: 38px;
+    color: #c77d91;
+    margin-bottom: 12px;
+}
+
+.oculto {
+    display: none;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.decoracion.pastel {
+    font-size: 180px !important;
+    line-height: 1.5;
+    display: block;
+    margin-bottom: 25px;
+}
+
+
+@keyframes flotar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+.confeti {
+    position: fixed;
+    top: -20px;
+    z-index: 9999;
+    pointer-events: none;
+    animation: caer 3s ease-out forwards;
+}
+
+@keyframes caer {
+    to {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+    }
+}
